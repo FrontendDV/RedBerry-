@@ -95,3 +95,123 @@ h2{
 
 
 
+/* =========================== COORDINATE SECTION ===================== */
+.coordinate-section{
+    height: 100vh;
+    background: linear-gradient(90deg, var(--color-white) 50%, var(--color-bg) 50%);
+}
+
+
+
+.coordinate__container{
+    padding-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.coordinate__form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-50px);
+}
+
+
+
+.coordinate__form form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 131px;
+}
+
+
+
+.input{
+    width: 455px;
+    height: 54px;
+    border: 1px solid #525557;
+    padding-left: 57px;
+}
+
+
+/* Error styles  */
+.error__alert{
+    font-size: 11px;
+    font-style: italic;
+    line-height: 13px;
+    color: var(--color-red);
+    margin-top: 5px;
+    margin-bottom: 14px;
+    padding-left: 57px;
+    visibility: hidden;
+}
+
+
+.input__alert{
+    border: 1px solid var(--color-red);
+}
+
+.coordinate__form input::placeholder{
+    font-size: 14px;
+    line-height: 17px;
+    color: #454545;
+}
+
+
+
+
+
+.coordinate__redberry-text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.coordinate__redberry-text p {
+    margin-top: 131px;
+    font-size: 24px;
+    line-height: 200%; 
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+}
+
+/* Paggination */
+.paggination{
+    margin-top: 100px;
+}
+
+.pagination__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pagination__container p{
+    margin-left: 18px;
+}
+
+.paggination__button{
+    padding: 4px;
+    border: 2px solid var(--color-red);
+    border-radius: 50%;
+    color: var(--color-red);
+    font-size: 12px;
+}
+
+.paggination__circle{
+    color: #FE3B1F;
+    opacity: 0.1;
+}
+.paggination__circle-active{
+    color: #FE3B1F;
+    opacity: 1;
+}

@@ -1,0 +1,97 @@
+
+body{
+    font-family: "Montserrat",sans-serif;
+}
+
+*{
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: 'Rowdies', cursive;
+}
+
+
+h1{
+    font-size: 96px;
+    line-height: 119px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FE3B1F;
+}
+
+
+h2{
+    font-size: 64px;
+    line-height: 79px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    color: #FE3B1F;
+}
+
+
+:root{
+    --color-bg: #0C0D0E;
+    --color-red: #FE3B1F; 
+    --color-white: #ffffff;
+}
+
+
+/* =========================== WELCOME SECTION ===================== */
+.welcome-section{
+    height: 100vh;
+    background:var(--color-bg);
+    background-image: url(/assets/stars.png);
+    overflow: hidden;
+}
+
+
+.welcome__contiainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome__contiainer h1{
+    margin-top: 175px;
+}
+
+.welcome__contiainer button{
+    margin-top: 105px;
+    width: 395px;
+    height: 79px;
+    border-radius: 50px;
+    border: none;
+    background: var(--color-red);
+    font-size: 24px;
+    color: var(--color-white);
+}
+
+.welcome__contiainer a{
+    margin-top: 18px;
+    color: var(--color-white);
+    text-decoration: underline;
+    font-family: "Montserrat",sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+
+

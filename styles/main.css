@@ -161,8 +161,11 @@ h2{
     color: #454545;
 }
 
-
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
 .coordinate__redberry-text{
@@ -268,18 +271,42 @@ h2{
     padding: 5px;
     border: none;
 }
-
+.list{
+    width: 490px;
+}
 
 .dropdown__list{
     position: absolute;
     left: 0%;
-    top: 100%;
+    top: 50%;
     background: var(--color-white);
     width: 100%;
     z-index: 1;
     border: 1px solid #525557;
-    padding: 10px;
-   
+    flex-direction: column;
+    display: none;
+    transition: 0.3s all ease;
+}
+.dropdown__list-toggle{
+    left: 0%;
+    top: 100%;
+    display: flex;
+}
+
+
+.skill__text{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-bg);
+    background: var(--color-white);
+    padding: 20px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+.skill__text:hover{
+    color: var(--color-white);
+    background: var(--color-bg);
 }
 
 .skill__input i{

@@ -4,8 +4,8 @@ let surname__input = document.querySelector('#surname__input');
 let email__input = document.querySelector('#email__input');
 let number__input = document.querySelector('#number__input');
 let next__btn = document.querySelector('#next__btn')
-
-
+let add__skill__btn = document.querySelector('#add__skill-button')
+let selected__skills = document.querySelector('.selected__skills')
 
 
 // Listener
@@ -15,9 +15,32 @@ next__btn.addEventListener('click',()=>{
     check__inputs()
 })
 
-
-
-
+add__skill__btn.addEventListener('click',(e)=>{
+    // on click this button , create skill item boxes
+    let selected__skills__box = document.createElement('div')
+    selected__skills__box.setAttribute('class','selected__skills-box')
+    selected__skills.appendChild(selected__skills__box)
+    // then create titles div
+    let selected__skills__title = document.createElement('div')
+    selected__skills__title.setAttribute('class','selected__skills-title')
+    selected__skills__box.appendChild(selected__skills__title)
+    // then add titles in titles div
+    // skill title
+    let skill__title = document.createElement('p')
+    skill__title.setAttribute('class','skill__title')
+    skill__title.innerText = document.querySelector('#dropdown').value
+    selected__skills__title.appendChild(skill__title)
+    // experience title
+    let experience__title = document.createElement('p')
+    experience__title.setAttribute('class','experience__title')
+    experience__title.innerHTML = 'Years of Experience : ' + document.querySelector('.experience__input').value
+    selected__skills__title.appendChild(experience__title)
+    // then add minus icon
+    let minus__icon = document.createElement('span')
+    minus__icon.setAttribute('class','minus__icon')
+    minus__icon.innerHTML = '<i class="fa-solid fa-minus"></i>'
+    selected__skills__box.appendChild(minus__icon)
+})
 
 
 
@@ -65,17 +88,10 @@ function check__inputs(){
     // Phone number check function is in index.html file
 }
 
-
-
-
-// Check if is email
+// Check if is email format valid
 function isEmail(email){
-    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    return /^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email)
 }
-
-
-
-
 
 
 // Get skills from API Doc
@@ -86,17 +102,19 @@ request.send()
 request.onload=function(){
     let skillObjParse = JSON.parse(request.responseText)
     for(let i=0; i<skillObjParse.length; i++){
-        let skill__text = document.createElement('p')
+        let skill__text = document.createElement('option')
         skill__text.innerText = skillObjParse[i].title
         skill__text.setAttribute('class','skill__text')
+        skill__text.setAttribute('value',skillObjParse[i].title)
         document.querySelector('#dropdown').appendChild(skill__text)
     }
 }
 
 
 
-// 
-let selectButton = document.querySelector('.fa-angle-down')
-selectButton.addEventListener('click',()=>{
-    document.querySelector('.dropdown__list').classList.toggle('dropdown__list-toggle')
-})
+
+
+
+
+
+

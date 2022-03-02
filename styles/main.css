@@ -247,20 +247,35 @@ input::-webkit-inner-spin-button {
 
 .skill__input{
     width: 455px;
-    height: 54px;
     border: 1px solid #525557;
     display: flex;
     justify-content: space-between;
     padding: 20px 20px 20px 57px;
     margin-bottom: 31px;
+    appearance: none;
+    -webkit-appearence: none;
+    -moz-appearence:none;
+    font-style: italic;
+    color: #454545;
+}
+
+
+.select{
     position: relative;
 }
 
-.skill__input span{
-    font-size: 14px;
-    line-height: 17px;
-    font-style: italic;
+
+.custom__arrow{
+    position: absolute;
+    top: 32%;
+    right: 5%;
+    transform: translate(-50%,-50%);
+    display: block;
+    color: var(--color-red);
+    pointer-events: none;
 }
+
+
 
 .skill__inputs button{
     font-size: 12px;
@@ -271,48 +286,56 @@ input::-webkit-inner-spin-button {
     padding: 5px;
     border: none;
 }
-.list{
-    width: 490px;
-}
 
-.dropdown__list{
-    position: absolute;
-    left: 0%;
-    top: 50%;
-    background: var(--color-white);
-    width: 100%;
-    z-index: 1;
-    border: 1px solid #525557;
-    flex-direction: column;
-    display: none;
-    transition: 0.3s all ease;
-}
-.dropdown__list-toggle{
-    left: 0%;
-    top: 100%;
-    display: flex;
-}
 
 
 .skill__text{
     font-size: 14px;
     font-weight: bold;
     color: var(--color-bg);
-    background: var(--color-white);
-    padding: 20px;
     transition: 0.3s all ease;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.skill__text:hover{
-    color: var(--color-white);
-    background: var(--color-bg);
-}
 
-.skill__input i{
-    color: var(--color-red);
-}
+
 
 .skill__experience-text{
     color: #727272;
+}
+
+
+.selected__skills{
+    margin-top: 56px;
+    width: 455px;
+}
+.selected__skills-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #525557;
+    margin-bottom: 17px;
+    padding: 15px;
+}
+
+
+.selected__skills-title{
+    display: flex;
+}
+.selected__skills-title p{
+    margin-right: 35px;
+    font-size: 14px;
+    line-height: 17px; 
+    color: #000000;
+    font-weight: bold;
+}
+
+
+.minus__icon{
+    font-size: 10px;
+    color: var(--color-red);
+    border: 2px solid var(--color-red);
+    border-radius: 50%;
+    padding: 3px;
 }

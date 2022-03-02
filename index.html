@@ -85,24 +85,25 @@
         <div class="skill__select">
             <h2>Tell us about your skills</h2>
             <div class="skill__inputs">
-                <div class="skill__input skill__input-dropdown">
-                    <span  class="title">Skills</span>
-                    <i class="fa-solid fa-angle-down"></i>
-                    <div class="dropdown__list" id="dropdown">
-                       
-                    </div>
+                <div class="select">
+                    <select class="skill__input" id="dropdown">
+                        <option value="skills" selected>Skills :</option>
+                    </select>
+                    <span class="custom__arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
-                <div class="skill__input">
-                    <a class="skill__experience-text">Experience Duration in Years</a>
-                </div>
-                <button>Add Programming Language</button>
+                <input type="number" class="skill__input experience__input" placeholder="Experience Duration in Years">
+                <button id="add__skill-button">Add Programming Language</button>
             </div>
+            <div class="selected__skills"></div>
         </div>
         <div class="about-battles-text">
             <h2>A bit about our battles</h2>
         </div>
     </div>
 </div>
+
+
+
 
 
 

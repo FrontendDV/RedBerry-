@@ -31,14 +31,14 @@
         <div class="coordinate__form">
             <h2>Hey, Rocketeer, what are your coordinates?</h2>
             <form>
-                <input type="text" placeholder="First Name" required class="input" id="name__input">
-                <span class="error__alert name__alert">*first name is required</span>
-                <input type="text" placeholder="Last Name" required class="input" id="surname__input">
-                <span class="error__alert surname__alert">* last name should include 3 or more characters</span>
-                <input type="email" placeholder="E Mail" required class="input" id="email__input">
-                <span class="error__alert email__alert">*Email should be verify</span>
-                <input type="number" placeholder="+995 5_ _ _ _" class="input" id="number__input"> 
-                <span class="error__alert number__alert">*Number should be right</span>
+                <input type="text" placeholder="First Name"  class="input" id="name__input">
+                <span class="error__alert name__alert"></span>
+                <input type="text" placeholder="Last Name"  class="input" id="surname__input">
+                <span class="error__alert surname__alert"></span>
+                <input type="email" placeholder="E Mail"  class="input" id="email__input">
+                <span class="error__alert email__alert"></span>
+                <input type="text" placeholder="+995 5_ _ _ _" class="input number__input" id="number__input"> 
+                <span class="error__alert number__alert"></span>
             </form>
             <div class="paggination">
                 <div class="container pagination__container">
@@ -107,5 +107,13 @@
 
 
     <script src="./JS/main.js"></script>
+    <script src="./JS/cleave.js"></script>
+    <script src="./JS/cleave-phone.ge.js"></script>
+    <script>
+         let cleave = new Cleave('#number__input',{
+        phone:true,
+        phoneRegionCode: 'GE'
+    })
+    </script>
 </body>
 </html>

@@ -10,8 +10,6 @@ let selected__skills = document.querySelector('.selected__skills')
 
 // Listener
 next__btn.addEventListener('click',()=>{
-
-
     check__inputs()
 })
  
@@ -91,9 +89,27 @@ function check__inputs(){
     }else{
         email__input.style.border = '1px solid #525557'
         document.querySelector('.email__alert').style.visibility = 'hidden'
+        document.querySelector('#next__btn').setAttribute('class','paggination__button paggination__button-toggle')
     }
-    // Phone number check function is in index.html file
+    if(document.querySelector('#next__btn').hasAttribute('class','paggination__button paggination__button-toggle')){
+        let skill__section = document.querySelector('#skills')
+        skill__section.scrollIntoView()
+        let coordinate__section = document.querySelector('.coordinate-section')
+        coordinate__section.style.display = 'none'
+    }
+    // Phone number check function is in index.html file    
+    
 }
+
+
+
+function welcome__start__button(){
+    let coordinate__section = document.querySelector('#coordinate')
+    coordinate__section.scrollIntoView()
+    let welcome__section = document.querySelector('.welcome-section')
+    welcome__section.style.display = 'none'
+}
+
 
 // Check if is email format valid
 function isEmail(email){

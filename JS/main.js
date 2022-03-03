@@ -40,8 +40,13 @@ add__skill__btn.addEventListener('click',(e)=>{
     minus__icon.setAttribute('class','minus__icon')
     minus__icon.innerHTML = '<i class="fa-solid fa-minus"></i>'
     selected__skills__box.appendChild(minus__icon)
-})
 
+    minus__icon.addEventListener('click',(e)=>{
+        let parentElement = e.currentTarget.parentElement
+        parentElement.remove()
+    })
+
+})
 
 
 // Functions
@@ -109,7 +114,6 @@ request.onload=function(){
         document.querySelector('#dropdown').appendChild(skill__text)
     }
 }
-
 
 
 

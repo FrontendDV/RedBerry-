@@ -19,14 +19,14 @@
         <div class="container welcome__contiainer">
              <h1>Welcome Rocketeer !</h1>
              <button>Start Questionnaire</button>
-             <a href="#">Submitted Applications</a>
+             <a href="#coordinate">Submitted Applications</a>
              <div class="welcome__image">
                  <img src="./assets/rocketman.png" width="100%" alt="rocketman">
              </div>
         </div>
     </div>
 <!-- Coordinates section -->
-<div class="coordinate-section">
+<div class="coordinate-section" id="coordinate">
     <div class="container coordinate__container">
         <div class="coordinate__form">
             <h2>Hey, Rocketeer, what are your coordinates?</h2>
@@ -95,12 +95,221 @@
                 <button id="add__skill-button">Add Programming Language</button>
             </div>
             <div class="selected__skills"></div>
+            <div class="paggination">
+                <div class="container pagination__container">
+                    <p class="paggination__button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__button" id="next__btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="about-battles-text">
             <h2>A bit about our battles</h2>
+            <p>
+                As we said, Redberry has been on the field for quite some time now, and 
+                we have touched and embraced a variety of programming languages, technologies, 
+                philosophies, and frameworks. We are battle-tested in PHP Laravel Stack with 
+                Vue.js, refined in React, and allies with Serverside technologies like Docker 
+                and Kubernetes, and now we have set foot in the web3 industry.
+            </p>
         </div>
     </div>
 </div>
+
+<!-- Q&A SECTION -->
+<div class="question-section">
+    <div class="container question__container">
+        <div class="questions__side">
+            <h2>Covid Stuff</h2>
+            <div class="qusetion__box">
+                <p class="question__title">how would you prefer to work?</p>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">From Sairme Office</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">From Home</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">Hybrid</label>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">Did you contact covid 19? :(</p>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">Yes</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">No</label>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">When?</p>
+                <div class="radio">
+                    <input type="date" name="" id="" placeholder="Date">
+                    <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">Have you been vaccinated?</p>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">Yes</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">No</label>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">When did you get your last covid vaccine?</p>
+                <div class="radio">
+                    <input type="date" placeholder="Date"  name="" id="">
+                    <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
+                </div>
+            </div>
+            <div class="paggination">
+                <div class="container pagination__container">
+                    <p class="paggination__button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__button" id="next__btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="redberry__covid__policies">
+            <h2>Redberry Covid Policies </h2>
+            <p>
+                As this infamous pandemic took over the world, we adjusted 
+                our working practices so that our employees can be as safe 
+                and comfortable as possible. We have a hybrid work environment, 
+                so you can either work from home or visit our lovely office on 
+                Sairme Street. If it was up to us, we would love you to see us 
+                in the office because we think face-to-face communications > Zoom 
+                meetings. Both on the fun and productivity scales. 
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- What About SECTION -->
+<div class="about-section">
+    <div class="container about__container">
+        <div class="question__side">
+            <h2>What about you?</h2>
+            <div class="qusetion__box">
+                <p class="question__title">Would you attend Devtalks and maybe also organize your own?</p>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">Yes</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="" id="">
+                    <label for="">No</label>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">What would you speak about at Devtalk?</p>
+                <div class="radio">
+                   <textarea name="" id="" cols="30"  rows="10" placeholder="I would"></textarea>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">Tell us something special</p>
+                <div class="radio">
+                   <textarea name="" id="" cols="30"  rows="10" placeholder="I..."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="redberrian__text">
+            <h2>Redberrian insights</h2>
+            <p>
+                We were soo much fun before the pandemic started! Parties almost 
+                every weekend and lavish employee birthday celebrations! Unfortunately, 
+                covid ruined that fun like it did almost everything else in the world. 
+                But we try our best to zhuzh it up a bit. For example, we host biweekly 
+                Devtalks where our senior and lead developers talk about topics they are 
+                passionate about. Previous topics have included Web3, NFT, Laravel 9, 
+                Kubernetes, etc. We hold these talks in the office but you can join our 
+                Zoom broadcast as well. Feel free to join either as an attendee or a speaker!
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- SUBMIT SECTION -->
+<div class="submit-section">
+    <div class="container submit__container">
+        <div class="buttons">
+            <button>Submit</button>
+            <a href="">go back</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- THANKS SECTION -->
+<div class="thanks-section">
+    <div class="container thanks__container">
+        <div class="text">
+            <h2>Thanks for Joining 😊 </h2>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 

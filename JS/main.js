@@ -14,7 +14,8 @@ next__btn.addEventListener('click',()=>{
 
     check__inputs()
 })
-
+ 
+let count = 0
 add__skill__btn.addEventListener('click',(e)=>{
     // on click this button , create skill item boxes
     let selected__skills__box = document.createElement('div')
@@ -46,6 +47,7 @@ add__skill__btn.addEventListener('click',(e)=>{
         parentElement.remove()
     })
 
+    selected__skills.childElementCount = count++
 })
 
 
@@ -114,6 +116,7 @@ request.onload=function(){
         document.querySelector('#dropdown').appendChild(skill__text)
     }
 }
+
 
 
 

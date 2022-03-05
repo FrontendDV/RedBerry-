@@ -231,3 +231,28 @@ fetch("https://bootcamp-2022.devtest.ge/api/application",{
 
 
 
+
+
+// Question js
+let covid__yes = document.querySelector('#covid__yes')
+let covid__no = document.querySelector('#covid__no')
+let vaccinated__yes = document.querySelector('#vaccinated__yes')
+let vaccinated__no = document.querySelector('#vaccinated__no')
+let covid__date__box = document.querySelector('#covid__date__box')
+let vaccinated__date__box = document.querySelector('#vaccinated__date__box')
+
+
+covid__yes.addEventListener('click',()=>{
+    covid__date__box.style.display='block'
+})
+covid__no.addEventListener('click',()=>{
+    covid__date__box.style.display='none'
+})
+
+
+vaccinated__yes.addEventListener('click',()=>{
+    vaccinated__date__box.style.display='block'
+})
+vaccinated__no.addEventListener('click',()=>{
+    vaccinated__date__box.style.display='none'
+})

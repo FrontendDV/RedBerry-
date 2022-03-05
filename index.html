@@ -19,7 +19,7 @@
         <div class="container welcome__contiainer">
              <h1>Welcome Rocketeer !</h1>
              <button onclick="welcome__start__button()">Start Questionnaire</button>
-             <a href="#coordinate">Submitted Applications</a>
+             <a href="#">Submitted Applications</a>
              <div class="welcome__image">
                  <img src="./assets/rocketman.png" width="100%" alt="rocketman">
              </div>
@@ -86,10 +86,11 @@
             <h2>Tell us about your skills</h2>
             <div class="skill__inputs">
                 <div class="select">
-                    <select class="skill__input" id="dropdown">
-                        <option value="skills" selected>Skills :</option>
+                    <select class="skill__input" id="dropdown" >
+                        <option value="" selected>Skills :</option>
                     </select>
                     <span class="custom__arrow"><i class="fa-solid fa-angle-down"></i></span>
+                    <span class="error-text"></span>
                 </div>
                 <input type="number" class="skill__input experience__input" placeholder="Experience Duration in Years">
                 <button id="add__skill-button">Add Programming Language</button>

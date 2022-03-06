@@ -30,7 +30,7 @@
     <div class="container coordinate__container">
         <div class="coordinate__form">
             <h2>Hey, Rocketeer, what are your coordinates?</h2>
-            <form>
+            <form method="post" id="form">
                 <input type="text" placeholder="First Name"  class="input" id="name__input">
                 <span class="error__alert name__alert"></span>
                 <input type="text" placeholder="Last Name"  class="input" id="surname__input">
@@ -39,6 +39,7 @@
                 <span class="error__alert email__alert"></span>
                 <input type="text" placeholder="+995 5_ _ _ _" class="input number__input" id="number__input"> 
                 <span class="error__alert number__alert"></span>
+                <button>submit</button>
             </form>
             <div class="paggination">
                 <div class="container pagination__container">
@@ -144,7 +145,7 @@
                 <p class="question__title">how would you prefer to work?</p>
                 <div class="radio">
                     <input type="radio" name="work" id="fromOffice">
-                    <label for="fromOffice">From Sairme Office</label>
+                    <label for="fromOffice" id="fromOffice__label">From Sairme Office</label>
                 </div>
                 <div class="radio">
                     <input type="radio" name="work" id="fromHome">
@@ -154,6 +155,7 @@
                     <input type="radio" name="work" id="hybrid">
                     <label for="hybrid">Hybrid</label>
                 </div>
+                <p class="work__question__error"></p>
             </div>
             <div class="qusetion__box">
                 <p class="question__title">Did you contact covid 19? :(</p>
@@ -165,11 +167,12 @@
                     <input type="radio" name="covid?" id="covid__no">
                     <label for="covid__no">No</label>
                 </div>
+                <p class="covid__question__error"></p>
             </div>
             <div class="qusetion__box covid__date__box " id="covid__date__box">
                 <p class="question__title">When?</p>
                 <div class="radio">
-                    <input type="date" name="" id="" placeholder="Date">
+                    <input type="date" name="" id="covid__date__input">
                     <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
                 </div>
             </div>
@@ -183,6 +186,7 @@
                     <input type="radio" name="vaccinated?" id="vaccinated__no">
                     <label for="vaccinated__no">No</label>
                 </div>
+                  <p class="vaccinated__question__error"></p>
             </div>
             <div class="qusetion__box vaccinated__date__box" id="vaccinated__date__box">
                 <p class="question__title">When did you get your last covid vaccine?</p>
@@ -211,7 +215,7 @@
                     <p class="paggination__circle">
                         <i class="fa-solid fa-circle"></i>
                     </p>
-                    <p class="paggination__button" id="next__btn">
+                    <p class="paggination__button covid__stuff" id="next__btn">
                         <i class="fa-solid fa-angle-right"></i>
                     </p>
                 </div>
@@ -242,27 +246,56 @@
             <div class="qusetion__box">
                 <p class="question__title">Would you attend Devtalks and maybe also organize your own?</p>
                 <div class="radio">
-                    <input type="radio" name="" id="">
-                    <label for="">Yes</label>
+                    <input type="radio" name="devtalks" id="devtalk__yes">
+                    <label for="devtalk__yes">Yes</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="" id="">
-                    <label for="">No</label>
+                    <input type="radio" name="devtalks" id="devtalk__no">
+                    <label for="devtalk__no">No</label>
                 </div>
+                <p class="devtalk__question__error"></p>
             </div>
             <div class="qusetion__box">
                 <p class="question__title">What would you speak about at Devtalk?</p>
                 <div class="radio">
-                   <textarea name="" id="" cols="30"  rows="10" placeholder="I would"></textarea>
+                   <textarea name="" id="devtalk__textarea" cols="30"  rows="10" placeholder="I would"></textarea>
                 </div>
+                <p class="devtalk__textarea__error"></p>
             </div>
             <div class="qusetion__box">
                 <p class="question__title">Tell us something special</p>
                 <div class="radio">
-                   <textarea name="" id="" cols="30"  rows="10" placeholder="I..."></textarea>
+                   <textarea name="" id="something__special__textarea" cols="30"  rows="10" placeholder="I..."></textarea>
+                </div>
+                <p class="something__textarea__error"></p>
+            </div>
+            <div class="paggination">
+                <div class="container pagination__container">
+                    <p class="paggination__button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__button about__you" id="next__btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </p>
                 </div>
             </div>
         </div>
+        
         <div class="redberrian__text">
             <h2>Redberrian insights</h2>
             <p>
@@ -285,7 +318,7 @@
 <div class="submit-section">
     <div class="container submit__container">
         <div class="buttons">
-            <button>Submit</button>
+            <button id="submit__button">Submit</button>
             <a href="">go back</a>
         </div>
     </div>

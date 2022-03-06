@@ -203,30 +203,6 @@ add__skill__btn.addEventListener('click',()=>{
 
 
 
-// POST FORM to API
-fetch("https://bootcamp-2022.devtest.ge/api/application",{
-    method: "POST",
-    body: JSON.stringify({
-        first__name : 'gio',
-        last__name : 'wereteli',
-        email: 'gio.wereteli.seu@gmail.com',
-        phone: '+995599020281',
-        skills: [
-            {
-                id: 1,
-                experience: 3
-            }
-        ],
-        work__preference: 'from__home',
-        had__covid : true,
-        had__covid__at: '2022-02-23',
-        vaccinated: true,
-        vaccinated__at: '2022-02-23',
-        will__organize__devtalk : true,
-        devtalk__topic : 'I would ...',
-        something__special : 'I am Special !'
-    })
-})
 
 
 
@@ -256,3 +232,113 @@ vaccinated__yes.addEventListener('click',()=>{
 vaccinated__no.addEventListener('click',()=>{
     vaccinated__date__box.style.display='none'
 })
+
+
+
+//================== Covid Stuff Validation
+// Selectors
+let fromOffice = document.querySelector('#fromOffice')
+let fromHome = document.querySelector('#fromHome')
+let hybrid = document.querySelector('#hybrid')
+let covid__stuff = document.querySelector('.covid__stuff')
+
+// Function
+
+covid__stuff.addEventListener('click',()=>{
+    if(!fromOffice.checked && !fromHome.checked && !hybrid.checked){
+        document.querySelector('.work__question__error').innerText = '*Please answer the question'
+        document.querySelector('.work__question__error').style.color = 'var(--color-red)'
+        document.querySelector('.work__question__error').style.fontSize = '15px'
+    }else{
+        document.querySelector('.work__question__error').style.display = 'none'
+    }  
+
+    if(!covid__yes.checked && !covid__no.checked){
+        document.querySelector('.covid__question__error').innerText = '*Please answer the question'
+        document.querySelector('.covid__question__error').style.color = 'var(--color-red)'
+        document.querySelector('.covid__question__error').style.fontSize = '15px'
+    }else{
+        document.querySelector('.covid__question__error').style.display = 'none'
+    }
+
+    if(!vaccinated__yes.checked && !vaccinated__no.checked){
+        document.querySelector('.vaccinated__question__error').innerText = '*Please answer the question'
+        document.querySelector('.vaccinated__question__error').style.color = 'var(--color-red)'
+        document.querySelector('.vaccinated__question__error').style.fontSize = '15px'
+    }else{
+        document.querySelector('.vaccinated__question__error').style.display = 'none'
+    }
+})
+
+
+
+// Devtalk Validation
+let devtalk__yes = document.querySelector('#devtalk__yes')
+let devtalk__no = document.querySelector('#devtalk__no')
+let about__you = document.querySelector('.about__you')
+let devtalk__textarea = document.querySelector('#devtalk__textarea')
+let something__special__textarea = document.querySelector('#something__special__textarea')
+
+
+about__you.addEventListener('click',()=>{
+    if(!devtalk__yes.checked && !devtalk__no.checked){
+        document.querySelector('.devtalk__question__error').innerText = '*Please answer the question'
+        document.querySelector('.devtalk__question__error').style.color = 'var(--color-red)'
+        document.querySelector('.devtalk__question__error').style.fontSize = '15px'
+    }else{
+        document.querySelector('.devtalk__question__error').style.display = 'none'
+    }
+
+    if(devtalk__textarea.value == '' ){
+        document.querySelector('.devtalk__textarea__error').innerText = '*Please answer the question'
+        document.querySelector('.devtalk__textarea__error').style.color = 'var(--color-red)'
+        document.querySelector('.devtalk__textarea__error').style.fontSize = '15px'
+    }else{
+        document.querySelector('.devtalk__textarea__error').style.display = 'none'
+    }
+
+    if(something__special__textarea.value == '' ){
+        document.querySelector('.something__textarea__error').innerText = '*Please tell us something special'
+        document.querySelector('.something__textarea__error').style.color = 'var(--color-red)'
+        document.querySelector('.something__textarea__error').style.fontSize = '15px'
+    }else{
+        document.querySelector('.something__textarea__error').style.display = 'none'
+    }
+})
+
+
+
+// Submit button
+let form = document.querySelector('#form')
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault()
+
+
+    fetch("https://bootcamp-2022.devtest.ge/api/application",{
+        method: 'POST',
+        body:JSON.stringify({
+            token: "54994408-8eec-4dd5-9c12-0a94767c4399",
+            first_name:name__input.value,
+            last_name:surname__input.value,
+            email:email__input.value,
+            phone:number__input.value,
+        }),
+        headers:{
+            "Content-Type": "application/json"
+        }
+    })
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+    })
+})
+
+
+
+
+
+// POST FORM to API
+

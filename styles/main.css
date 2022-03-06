@@ -418,11 +418,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     z-index: 3;
 }
 
-input[type="date"]::before{
-    content: attr(placeholder);
-    font-size: 14px;
-    color: #454545;
-}
+
 
 
 #covid__date__box{

@@ -308,37 +308,26 @@ about__you.addEventListener('click',()=>{
 
 
 
-// Submit button
 let form = document.querySelector('#form')
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
 
-
     fetch("https://bootcamp-2022.devtest.ge/api/application",{
         method: 'POST',
-        body:JSON.stringify({
-            token: "54994408-8eec-4dd5-9c12-0a94767c4399",
-            first_name:name__input.value,
-            last_name:surname__input.value,
-            email:email__input.value,
-            phone:number__input.value,
-        }),
         headers:{
-            "Content-Type": "application/json"
-        }
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({
+            "token":"54994408-8eec-4dd5-9c12-0a94767c4399",
+            "name":name__input.value,
+            "last_name":surname__input.value,
+            "email":email__input.value,
+            "phone":number__input.value,
+            "skills": skills
+        })
     })
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(data){
-        console.log(data)
-    })
+    .then(response => response.json())
+    .then(data => console.log(data))
 })
-
-
-
-
-
-// POST FORM to API
 

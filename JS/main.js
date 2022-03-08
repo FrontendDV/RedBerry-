@@ -309,7 +309,21 @@ about__you.addEventListener('click',()=>{
 
 
 let form = document.querySelector('#form')
-
+let data = {
+    "token":"b77584bc-41e6-4b23-8f09-ae1f3264c1c2",
+    "name":"gela",
+    "last_name":"doborjginidze",
+    "email":"dobo@gmail.com",
+    "phone":"+995599020281",
+    "skills": skills,
+    "work_prefrence":'from_home',
+    "had_covid": true,
+    "had_covid_at":"2022-22-02",
+    "vaccinated":true,
+    "vaccinated_at":"2022-22-22",
+    "will_organize_devtalk":true,
+    "something_special":"i am special."
+}
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
 
@@ -318,16 +332,8 @@ form.addEventListener('submit',(e)=>{
         headers:{
             "Content-Type":"application/json"
         },
-        body: JSON.stringify({
-            "token":"54994408-8eec-4dd5-9c12-0a94767c4399",
-            "name":name__input.value,
-            "last_name":surname__input.value,
-            "email":email__input.value,
-            "phone":number__input.value,
-            "skills": skills
-        })
+        body: JSON.stringify(data)
     })
-    .then(response => response.json())
     .then(data => console.log(data))
 })
 

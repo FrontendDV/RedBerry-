@@ -11,7 +11,8 @@ let experience__input = document.querySelector('.experience__input')
 
 
 // Listener
-next__btn.addEventListener('click',()=>{
+next__btn.addEventListener('click',(e)=>{
+    e.preventDefault()
     check__inputs()
 })
  
@@ -60,16 +61,14 @@ function check__inputs(){
         document.querySelector('.email__alert').style.visibility = 'hidden'
     }
     // Phone number check function is in index.html file    
-    
+    if(name__input.value && surname__input.value && email__input.value){
+        location.href="/skill.html"
+    }
 }
 
 
 
-function welcome__start__button(){
-    let coordinate__section = document.querySelector('#coordinate')
-    coordinate__section.scrollIntoView()
 
-}
 
 
 // Check if is email format valid
@@ -157,7 +156,7 @@ add__skill__btn.addEventListener('click',()=>{
     
     })
     let obj__skills = {
-        name: skill__title.innerText,
+        id: skill__title.innerText,
         experience: experience__input.value
     }
     skills.push(obj__skills)
@@ -309,31 +308,54 @@ about__you.addEventListener('click',()=>{
 
 
 let form = document.querySelector('#form')
-let data = {
-    "token":"b77584bc-41e6-4b23-8f09-ae1f3264c1c2",
-    "name":"gela",
-    "last_name":"doborjginidze",
-    "email":"dobo@gmail.com",
-    "phone":"+995599020281",
-    "skills": skills,
-    "work_prefrence":'from_home',
-    "had_covid": true,
-    "had_covid_at":"2022-22-02",
-    "vaccinated":true,
-    "vaccinated_at":"2022-22-22",
-    "will_organize_devtalk":true,
-    "something_special":"i am special."
-}
+
+
+
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
-
+    let data = {
+        "token":"b77584bc-41e6-4b23-8f09-ae1f3264c1c2",
+        "first_name":name__input.value,
+        "last_name": surname__input.value,
+        "email":email__input.value,
+        "phone":number__input.value,
+        "skills": skills,
+        "work_preference":'from_home',
+        "had_covid": true,
+        "had_covid_at":"2022-02-23",
+        "vaccinated":true,
+        "vaccinated_at":"2022-02-23",
+        "will_organize_devtalk":true,
+        "something_special":"i am special."
+    }
     fetch("https://bootcamp-2022.devtest.ge/api/application",{
         method: 'POST',
+        body: JSON.stringify(data),
         headers:{
+            'accept' : 'application/json',
             "Content-Type":"application/json"
-        },
-        body: JSON.stringify(data)
+        }
     })
     .then(data => console.log(data))
+})
+
+
+let submited = document.querySelector('#submited')
+
+submited.addEventListener('click',()=>{
+    let myHeaders = new Headers({
+        'Authorization':'Token' + 'b77584bc-41e6-4b23-8f09-ae1f3264c1c2',
+        'Content-Type': 'application/x-www-form-urlencoded'
+    });
+    
+    
+    fetch('https://bootcamp-2022.devtest.ge/api/applications?token=b77584bc-41e6-4b23-8f09-ae1f3264c1c2',{
+        headers:myHeaders,
+        method: 'GET'
+    })
+    .then(response => response.json())
+    .then(response => {
+        console.log(response)
+    })
 })
 

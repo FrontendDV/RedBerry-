@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RedBerry</title>
+</head>
+<body>
+    
+
+<!-- Covid SECTION -->
+<div class="question-section">
+    <div class="container question__container">
+        <div class="questions__side">
+            <h2>Covid Stuff</h2>
+            <div class="qusetion__box">
+                <p class="question__title">how would you prefer to work?</p>
+                <div class="radio">
+                    <input type="radio" name="work" id="fromOffice">
+                    <label for="fromOffice" id="fromOffice__label">From Sairme Office</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="work" id="fromHome">
+                    <label for="fromHome" id="fromHome__label">From Home</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="work" id="hybrid">
+                    <label for="hybrid" id="hybrid__label">Hybrid</label>
+                </div>
+                <p class="work__question__error"></p>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">Did you contact covid 19? :(</p>
+                <div class="radio">
+                    <input type="radio" name="covid?" id="covid__yes">
+                    <label for="covid__yes">Yes</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="covid?" id="covid__no">
+                    <label for="covid__no">No</label>
+                </div>
+                <p class="covid__question__error"></p>
+            </div>
+            <div class="qusetion__box covid__date__box " id="covid__date__box">
+                <p class="question__title">When?</p>
+                <div class="radio">
+                    <input type="date" name="" id="covid__date__input">
+                    <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
+                </div>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">Have you been vaccinated?</p>
+                <div class="radio">
+                    <input type="radio" name="vaccinated?" id="vaccinated__yes">
+                    <label for="vaccinated__yes">Yes</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="vaccinated?" id="vaccinated__no">
+                    <label for="vaccinated__no">No</label>
+                </div>
+                  <p class="vaccinated__question__error"></p>
+            </div>
+            <div class="qusetion__box vaccinated__date__box" id="vaccinated__date__box">
+                <p class="question__title">When did you get your last covid vaccine?</p>
+                <div class="radio">
+                    <input type="date" placeholder="Date"  name="" id="" >
+                    <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
+                </div>
+            </div>
+            <div class="paggination">
+                <div class="container pagination__container">
+                    <p class="paggination__button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__button covid__stuff" id="next__btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="redberry__covid__policies">
+            <h2>Redberry Covid Policies </h2>
+            <p>
+                As this infamous pandemic took over the world, we adjusted 
+                our working practices so that our employees can be as safe 
+                and comfortable as possible. We have a hybrid work environment, 
+                so you can either work from home or visit our lovely office on 
+                Sairme Street. If it was up to us, we would love you to see us 
+                in the office because we think face-to-face communications > Zoom 
+                meetings. Both on the fun and productivity scales. 
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./JS/main.js"></script>
+ 
+</body>
+</html>

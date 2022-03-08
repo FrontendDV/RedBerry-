@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RedBerry</title>
+</head>
+<body>
+    
+
+<!-- Coordinates section -->
+<div class="coordinate-section" id="coordinate">
+    <div class="container coordinate__container">
+        <div class="coordinate__form">
+            <h2>Hey, Rocketeer, what are your coordinates?</h2>
+            <form id="form">
+                <input type="text" placeholder="First Name"  class="input" id="name__input">
+                <span class="error__alert name__alert"></span>
+                <input type="text" placeholder="Last Name"  class="input" id="surname__input">
+                <span class="error__alert surname__alert"></span>
+                <input type="email" placeholder="E Mail"  class="input" id="email__input">
+                <span class="error__alert email__alert"></span>
+                <input type="text" placeholder="+995 5_ _ _ _" class="input number__input" id="number__input"> 
+                <span class="error__alert number__alert"></span>
+            </form>
+            <div class="paggination">
+                <div class="container pagination__container">
+                    <a href="index.html" class="paggination__button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <a href="skill.html" class="paggination__button" id="next__btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="coordinate__redberry-text">
+            <h2>Redberry Origins</h2>
+            <p>
+                You watch “What? Where? When?” Yeah. Our founders used to play it. 
+                That’s where they got a question about a famous American author and 
+                screenwriter Ray Bradbury. Albeit, our CEO Gaga Darsalia forgot the 
+                exact name and he answered Ray Redberry. And at that moment, a name 
+                for a yet to be born company was inspired - Redberry 😇
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <script src="./JS/coordinate.js"></script>
+    <script src="./JS/cleave.js"></script>
+    <script src="./JS/cleave-phone.ge.js"></script>
+    <script>
+         let cleave = new Cleave('#number__input',{
+        phone:true,
+        phoneRegionCode: 'GE'
+    })
+    </script>
+</body>
+</html>

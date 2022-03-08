@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RedBerry</title>
+</head>
+<body>
+<!-- What About SECTION -->
+<div class="about-section">
+    <div class="container about__container">
+        <div class="question__side">
+            <h2>What about you?</h2>
+            <div class="qusetion__box">
+                <p class="question__title">Would you attend Devtalks and maybe also organize your own?</p>
+                <div class="radio">
+                    <input type="radio" name="devtalks" id="devtalk__yes">
+                    <label for="devtalk__yes">Yes</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="devtalks" id="devtalk__no">
+                    <label for="devtalk__no">No</label>
+                </div>
+                <p class="devtalk__question__error"></p>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">What would you speak about at Devtalk?</p>
+                <div class="radio">
+                   <textarea name="" id="devtalk__textarea" cols="30"  rows="10" placeholder="I would"></textarea>
+                </div>
+                <p class="devtalk__textarea__error"></p>
+            </div>
+            <div class="qusetion__box">
+                <p class="question__title">Tell us something special</p>
+                <div class="radio">
+                   <textarea name="" id="something__special__textarea" cols="30"  rows="10" placeholder="I..."></textarea>
+                </div>
+                <p class="something__textarea__error"></p>
+            </div>
+            <div class="paggination">
+                <div class="container pagination__container">
+                    <p class="paggination__button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle paggination__circle-active">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__circle">
+                        <i class="fa-solid fa-circle"></i>
+                    </p>
+                    <p class="paggination__button about__you" id="next__btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="redberrian__text">
+            <h2>Redberrian insights</h2>
+            <p>
+                We were soo much fun before the pandemic started! Parties almost 
+                every weekend and lavish employee birthday celebrations! Unfortunately, 
+                covid ruined that fun like it did almost everything else in the world. 
+                But we try our best to zhuzh it up a bit. For example, we host biweekly 
+                Devtalks where our senior and lead developers talk about topics they are 
+                passionate about. Previous topics have included Web3, NFT, Laravel 9, 
+                Kubernetes, etc. We hold these talks in the office but you can join our 
+                Zoom broadcast as well. Feel free to join either as an attendee or a speaker!
+            </p>
+        </div>
+    </div>
+</div>
+    <script src="./JS/main.js"></script>
+</body>
+</html>

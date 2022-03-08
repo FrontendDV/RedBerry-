@@ -55,7 +55,7 @@ h2{
 
 /* =========================== WELCOME SECTION ===================== */
 .welcome-section{
-    height: 100%;
+    height: 100vh;
     background:var(--color-bg);
     background-image: url(/assets/stars.png);
     overflow: hidden;
@@ -72,7 +72,11 @@ h2{
     margin-top: 175px;
 }
 
-.welcome__contiainer button{
+.start__button{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin-top: 105px;
     width: 395px;
     height: 79px;
@@ -87,9 +91,10 @@ h2{
 .welcome__contiainer button:hover{
     background: #ff3313;
     box-shadow: 0px 0px 5px #ff3313,0px 5px 5px #ff3313,0px 0px 5px #ff3313;
+    color: var(--color-white);
 }
 
-.welcome__contiainer a{
+#submited{
     margin-top: 18px;
     color: var(--color-white);
     text-decoration: underline;
@@ -97,16 +102,17 @@ h2{
     font-size: 24px;
     font-weight: normal;
     transition: 0.3s all ease;
+    cursor: pointer;
 }
 
-.welcome__contiainer a:hover{
+#submited:hover{
     color: #727272;
 }
 
 
 /* =========================== COORDINATE SECTION ===================== */
 .coordinate-section{
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(90deg, var(--color-white) 50%, var(--color-bg) 50%);
 }
 
@@ -236,7 +242,7 @@ input::-webkit-inner-spin-button {
 
 /* ===================================== SKILLS SECTION ==================== */
 .skill-section{
-    height:100%;
+    height:100vh;
     background: linear-gradient(90deg, var(--color-white) 50%, var(--color-bg) 50%);
 }
 
@@ -519,6 +525,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     line-height: 44px;
     color: var(--color-white);
     margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .buttons a{

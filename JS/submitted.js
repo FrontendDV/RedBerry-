@@ -1,5 +1,5 @@
 let request = new XMLHttpRequest()
-request.open("GET","https://bootcamp-2022.devtest.ge/api/applications?token=4317e2ac-24ab-49d9-aa38-3e5e6e035a94")
+request.open("GET","https://bootcamp-2022.devtest.ge/api/applications?token=a509cae4-abb0-47fe-a146-860d8b8eecda")
 request.send()
 let counter = 1
 request.onload=function(){
@@ -9,7 +9,6 @@ request.onload=function(){
         let last_name = applicationObeParse[i].last_name
         let email = applicationObeParse[i].email
         let phone = applicationObeParse[i].phone
-        let skills = applicationObeParse.skill
 
         // Main application box
         let submitted__application__box = document.createElement('div')

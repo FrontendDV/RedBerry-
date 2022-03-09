@@ -25,7 +25,7 @@ submit__button.addEventListener('click', (e) => {
     e.preventDefault()
     if(localStorage.getItem('had_covid_at','')){
         let data = {
-            "token":"4317e2ac-24ab-49d9-aa38-3e5e6e035a94",
+            "token":"a509cae4-abb0-47fe-a146-860d8b8eecda",
             "first_name":JSON.parse(first_name),
             "last_name": JSON.parse(last_name),
             "email":JSON.parse(email),
@@ -51,7 +51,7 @@ submit__button.addEventListener('click', (e) => {
         location.href = '/thanks.html'
     }else if(localStorage.getItem('vaccinated_at',null)){
         let data = {
-            "token":"4317e2ac-24ab-49d9-aa38-3e5e6e035a94",
+            "token":"a509cae4-abb0-47fe-a146-860d8b8eecda",
             "first_name":JSON.parse(first_name),
             "last_name": JSON.parse(last_name),
             "email":JSON.parse(email),
@@ -77,7 +77,7 @@ submit__button.addEventListener('click', (e) => {
         location.href = '/thanks.html'
     }else{
         let data = {
-            "token":"4317e2ac-24ab-49d9-aa38-3e5e6e035a94",
+            "token":"a509cae4-abb0-47fe-a146-860d8b8eecda",
             "first_name":JSON.parse(first_name),
             "last_name": JSON.parse(last_name),
             "email":JSON.parse(email),

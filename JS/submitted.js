@@ -9,7 +9,7 @@ request.onload=function(){
         let last_name = applicationObeParse[i].last_name
         let email = applicationObeParse[i].email
         let phone = applicationObeParse[i].phone
-        let skills = applicationObeParse.skills
+        let skills = applicationObeParse.skill
 
         // Main application box
         let submitted__application__box = document.createElement('div')

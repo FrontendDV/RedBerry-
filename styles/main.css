@@ -87,6 +87,13 @@ h2{
     color: var(--color-white);
     cursor: pointer;
     transition: 0.3s all ease;
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 0.5s all linear;
+}
+.start__button-appear{
+    opacity: 1;
+    transform: translateY(0px);
 }
 .welcome__contiainer button:hover{
     background: #ff3313;
@@ -108,8 +115,34 @@ h2{
 #submited:hover{
     color: #727272;
 }
+.submited{
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 0.5s all linear;
+}
+.submited-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.welcome__title{
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 0.5s all linear;
+}
+.welcome__title-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
 
-
+.welcome__image{
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 1s all linear;
+}
+.welcome__image-appear{
+    opacity: 1;
+    transform: translateY(0px) rotate(360deg);
+}
 /* =========================== COORDINATE SECTION ===================== */
 .coordinate-section{
     height: 100vh;

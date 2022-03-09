@@ -155,7 +155,7 @@ h2{
 
 /* Error styles  */
 .error__alert{
-    font-size: 11px;
+    font-size: 13px;
     font-style: italic;
     line-height: 13px;
     color: var(--color-red);
@@ -203,13 +203,14 @@ input::-webkit-inner-spin-button {
 
 /* Paggination */
 .paggination{
+    width: 300px;
     margin-top: 100px;
 }
 
 .pagination__container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 
@@ -272,6 +273,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: space-between;
     padding: 20px 20px 20px 57px;
+    margin-top: 10px;
     margin-bottom: 31px;
     appearance: none;
     -webkit-appearence: none;
@@ -288,7 +290,7 @@ input::-webkit-inner-spin-button {
 
 .custom__arrow{
     position: absolute;
-    top: 32%;
+    top: 40%;
     right: 5%;
     transform: translate(-50%,-50%);
     display: block;
@@ -377,7 +379,13 @@ input::-webkit-inner-spin-button {
     color: var(--color-white);
 }
 
-
+/* error texts */
+.skills__error-text,.experience__error-text{
+    font-size: 15px;
+    margin-right: auto;
+    color: var(--color-red);
+    font-style: italic;
+}
 
 /* ================================ Q&A SECTION ================== */
 .question-section{
@@ -387,12 +395,13 @@ input::-webkit-inner-spin-button {
 
 .question__container{
     padding-top: 130px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: space-between;
 }
 
 .qusetion__box{
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .question__title{
@@ -406,7 +415,7 @@ input::-webkit-inner-spin-button {
     position: relative;
 }
 
-input[type="date"]{
+#covid__date__input,#vaccinated_at{
     width: 455px;
     border: 1px solid #525557;
     display: flex;
@@ -461,7 +470,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 
 /* ================================ About Section ==================== */
 .about-section{
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(90deg, var(--color-white) 50%, var(--color-bg) 50%);
 }
 
@@ -492,7 +501,12 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     height: 122px;
 }
 
-
+#textarea__box1{
+    display: none;
+}
+#textarea__box2{
+    display: none;
+}
 /* ================================ SUBMIT SECTION ================*/
 .submit-section{
     height: 100vh;
@@ -557,4 +571,108 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 
 
 
+/* ============================== Thanks SECTION ====================== */
+.submitted-section{
+    height: 100%;
+    background: #000000;
+    padding-bottom: 710px;
+}
 
+.submitted__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%;
+}
+
+.subbmitted-title{
+    padding-top: 94px;
+    font-size: 56px;
+    line-height: 70px;
+    letter-spacing: 0.11em;
+    color: #FFFFFF;
+}
+
+.submitted__applications{
+    margin-top: 50px;
+}
+
+.submitted__application-box{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    padding: 20px;
+    width: 100%;
+    background: var(--color-red);
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.header:hover{
+    background: #ff3313;
+}
+.numeric_title,.down_arrow{
+    color: var(--color-white);
+}
+
+
+.application_body{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    background: var(--color-white);
+    padding: 30px;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s all ease;
+}
+.application_body-toggle{
+    display: flex;
+    transform: translateY(0px);
+    opacity: 1;
+}
+.personal_information,.skillset,.covid_situation,.Insigts{
+    width: 40%;
+}
+
+
+.info_title{
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #FE3B1F;
+    margin-bottom: 40px;
+}
+
+.sub_info_title{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+
+.sub_info{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #454545;
+    margin-left: 26px;
+}
+
+
+
+.covid__date__box,.vaccinated__date__box{
+    width: 300px;
+}
+#covid__date__input,#vaccinated_at{
+    width: 100%;
+}

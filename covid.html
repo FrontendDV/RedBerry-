@@ -39,11 +39,11 @@
             <div class="qusetion__box">
                 <p class="question__title">Did you contact covid 19? :(</p>
                 <div class="radio">
-                    <input type="radio" name="covid?" id="covid__yes">
+                    <input type="radio" name="covid" id="covid__yes">
                     <label for="covid__yes">Yes</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="covid?" id="covid__no">
+                    <input type="radio" name="covid" id="covid__no">
                     <label for="covid__no">No</label>
                 </div>
                 <p class="covid__question__error"></p>
@@ -51,18 +51,18 @@
             <div class="qusetion__box covid__date__box " id="covid__date__box">
                 <p class="question__title">When?</p>
                 <div class="radio">
-                    <input type="date" name="" id="covid__date__input">
+                    <input type="date" name="had_covit_at" id="covid__date__input">
                     <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
                 </div>
             </div>
             <div class="qusetion__box">
                 <p class="question__title">Have you been vaccinated?</p>
                 <div class="radio">
-                    <input type="radio" name="vaccinated?" id="vaccinated__yes">
+                    <input type="radio" name="vaccinated" id="vaccinated__yes">
                     <label for="vaccinated__yes">Yes</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="vaccinated?" id="vaccinated__no">
+                    <input type="radio" name="vaccinated" id="vaccinated__no">
                     <label for="vaccinated__no">No</label>
                 </div>
                   <p class="vaccinated__question__error"></p>
@@ -70,15 +70,15 @@
             <div class="qusetion__box vaccinated__date__box" id="vaccinated__date__box">
                 <p class="question__title">When did you get your last covid vaccine?</p>
                 <div class="radio">
-                    <input type="date" placeholder="Date"  name="" id="" >
+                    <input type="date" placeholder="Date"  name="" id="vaccinated_at" >
                     <span class="calendar__icon"><i class="fa-regular fa-calendar-days"></i></span>
                 </div>
             </div>
             <div class="paggination">
                 <div class="container pagination__container">
-                    <p class="paggination__button">
+                    <a href="skill.html" class="paggination__button">
                         <i class="fa-solid fa-angle-left"></i>
-                    </p>
+                    </a>
                     <p class="paggination__circle paggination__circle-active">
                         <i class="fa-solid fa-circle"></i>
                     </p>
@@ -115,26 +115,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="./JS/main.js"></script>
- 
+    <script src="./JS/covid.js"></script>
 </body>
 </html>

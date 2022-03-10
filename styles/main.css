@@ -54,10 +54,16 @@ h2{
 
 
 /* =========================== WELCOME SECTION ===================== */
+.bg-image{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+}
 .welcome-section{
     height: 100vh;
     background:var(--color-bg);
-    background-image: url(/assets/stars.png);
     overflow: hidden;
 }
 
